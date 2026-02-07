@@ -4,76 +4,135 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Material Didático de Matemática</title>
+    <title>Raiz Didática | Materiais de Matemática</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-    <!-- Cabeçalho / Navegação -->
+    <!-- HEADER -->
     <header class="header">
-        <div class="container">
-            <h1 class="logo">Matemática Criativa</h1>
+        <div class="container header-content">
+            <h1 class="logo">Raiz Didática</h1>
             <nav>
                 <ul class="nav-list">
-                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#produtos">Materiais</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#instagram">Instagram</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- HERO -->
     <section class="hero">
         <div class="container">
             <h2>Materiais Didáticos de Matemática</h2>
-            <p>Atividades criativas para professores e alunos. Explore nossas propostas e aprenda com diversão!</p>
-            <a href="#produtos" class="btn btn-primary">Ver Materiais</a>
+            <p>Conteúdos práticos, criativos e prontos para aplicar em sala de aula.</p>
+            <a href="#produtos" class="btn btn-primary">Ver materiais</a>
         </div>
     </section>
 
-    <!-- Seção de produtos -->
-    <section id="produtos" class="produtos container">
-        <h3>Produtos em Destaque</h3>
-        <div class="produtos-list">
+    <!-- PRODUTOS -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <h3 class="section-title">Materiais disponíveis</h3>
 
-            <article class="produto-card">
-                <img src="produto1.jpg" alt="Produto 1" />
-                <h4>Álbum de Números Naturais</h4>
-                <p class="preco">R$ 4,50</p>
-                <button class="btn btn-comprar">Comprar</button>
-            </article>
+            <div class="search-box">
+                <input type="text" id="pesquisa" placeholder="Pesquisar material..." />
+            </div>
 
-            <article class="produto-card">
-                <img src="produto2.jpg" alt="Produto 2" />
-                <h4>Explosão de Potências</h4>
-                <p class="preco">R$ 4,50</p>
-                <button class="btn btn-comprar">Comprar</button>
-            </article>
+            <div class="produtos-list">
 
-            <article class="produto-card">
-                <img src="produto3.jpg" alt="Produto 3" />
-                <h4>Bingo Matemático</h4>
-                <p class="preco">R$ 6,00</p>
-                <button class="btn btn-comprar">Comprar</button>
-            </article>
+                <article class="produto-card" data-nome="álbum números naturais">
+                    <img src="img/produto1.jpg" alt="Álbum de Números Naturais">
+                    <h4>Álbum de Números Naturais</h4>
+                    <p class="descricao">Atividade interativa para trabalhar números naturais.</p>
+                    <p class="preco">R$ 4,50</p>
 
+                    <button class="btn btn-amostra" data-amostra="img/amostra1.jpg">
+                        Ver amostra
+                    </button>
+
+                    <a href="produto.html?id=album-numeros" class="btn btn-comprar">
+                        Ver detalhes
+                    </a>
+                </article>
+
+                <article class="produto-card" data-nome="explosão potências">
+                    <img src="img/produto2.jpg" alt="Explosão de Potências">
+                    <h4>Explosão de Potências</h4>
+                    <p class="descricao">Jogo para fixação de potências.</p>
+                    <p class="preco">R$ 4,50</p>
+
+                    <button class="btn btn-amostra" data-amostra="img/amostra2.jpg">
+                        Ver amostra
+                    </button>
+
+                    <a href="produto.html?id=album-numeros" class="btn btn-comprar">
+                        Ver detalhes
+                    </a>
+                </article>
+
+                <article class="produto-card" data-nome="bingo matemático">
+                    <img src="img/produto3.jpg" alt="Bingo Matemático">
+                    <h4>Bingo Matemático</h4>
+                    <p class="descricao">Bingo educativo para revisão de conteúdos.</p>
+                    <p class="preco">R$ 6,00</p>
+
+                    <button class="btn btn-amostra" data-amostra="img/amostra3.jpg">
+                        Ver amostra
+                    </button>
+
+                    <a href="produto.html?id=album-numeros" class="btn btn-comprar">
+                        Ver detalhes
+                    </a>
+                </article>
+
+            </div>
         </div>
     </section>
 
-    <!-- Sobre -->
-    <section id="sobre" class="sobre container">
-        <h3>Sobre nossos materiais</h3>
-        <p>Oferecemos materiais didáticos em PDF para imprimir e aplicar em sala de aula. Cada item foi pensado para
-            tornar o ensino da matemática mais interativo e eficiente.</p>
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h3 class="section-title">Sobre os materiais</h3>
+            <p>
+                Os materiais da Raiz Didática foram pensados para tornar o ensino da matemática
+                mais leve, visual e significativo.
+            </p>
+        </div>
     </section>
 
-    <!-- Contato -->
-    <footer id="contato" class="footer container">
-        <p>Entre em contato: contato@matematicacriativa.com</p>
-        <p>&copy; 2026 Matemática Criativa</p>
+    <!-- INSTAGRAM -->
+    <section id="instagram" class="instagram">
+        <div class="container">
+            <h3 class="section-title">Nos acompanhe no Instagram</h3>
+            <a class="btn btn-instagram" href="https://www.instagram.com/raizdidatica/" target="_blank">
+                @raizdidatica
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Raiz Didática</p>
     </footer>
+
+    <!-- MODAL -->
+    <div class="modal" id="modalAmostra">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img id="modalImagem" src="" alt="Amostra do material">
+        </div>
+    </div>
 
     <script src="scripts.js"></script>
 </body>

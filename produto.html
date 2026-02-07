@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produto | Raiz Didática</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-content">
+    <h1 class="logo">Raiz Didática</h1>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Voltar</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="produto-detalhe">
+  <div class="container produto-grid">
+
+    <div class="produto-imagem">
+      <img id="produtoImagem" src="" alt="">
+    </div>
+
+    <div class="produto-info">
+      <h2 id="produtoTitulo"></h2>
+      <p id="produtoDescricao"></p>
+
+      <ul class="produto-lista">
+        <li>📄 Material em PDF</li>
+        <li>✂️ Pronto para imprimir</li>
+        <li>🎯 Alinhado à BNCC</li>
+      </ul>
+
+      <p class="produto-preco" id="produtoPreco"></p>
+
+      <button class="btn btn-amostra" id="btnAmostra">
+        Ver amostra
+      </button>
+
+      <a href="#" class="btn btn-comprar">
+        Comprar agora
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modalAmostra">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+    <img id="modalImagem" src="" alt="">
+  </div>
+</div>
+
+<script src="produto.js"></script>
+</body>
+</html>
