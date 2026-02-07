@@ -4,27 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raiz Didática | Materiais de Matemática</title>
-
-    <!-- Google Fonts -->
+    <title>Raiz Didática | Materiais de Matemática</title> <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
-
-    <!-- HEADER FIXO -->
+<body> <!-- HEADER FIXO -->
     <header class="header">
-        <div class="container header-content">
-
-            <a href="#" class="logo">
-                <img src="imagens/logo/logoRaizDidatica.png" alt="Raiz Didática">
-                <span>Raiz Didática</span>
-            </a>
-
+        <div class="container header-content"> <a href="#" class="logo"> <img src="imagens/logo/logoRaizDidatica.png"
+                    alt="Raiz Didática"> <span>Raiz Didática</span> </a>
             <nav>
                 <ul class="nav-list">
                     <li><a href="#produtos">Materiais</a></li>
@@ -32,120 +22,64 @@
                     <li><a href="#instagram">Contato</a></li>
                 </ul>
             </nav>
-
         </div>
     </header>
-
     <section class="hero-home">
-        <div class="container hero-grid">
-            <div class="hero-texto">
-                <h1>Materiais Didáticos que Encantam Professores e Alunos</h1>
-                <p>Atividades lúdicas e criativas para sala de aula, prontas para imprimir ou usar digitalmente.</p>
-                <div class="hero-buttons">
-                    <a href="#produtos" class="btn btn-primary">Ver Produtos</a>
-                    <a href="#sobre" class="btn btn-secondary">Conheça Nossa História</a>
-                </div>
-            </div>
-
-            <div class="hero-slider">
-                <img src="imagens/slider/slide1.png" alt="Destaque 1">
-                <img src="imagens/slider/slide2.png" alt="Destaque 2">
-                <!-- se quiser um slider funcional com JS -->
-            </div>
+        <div class="container hero-grid"> <!-- Card de texto -->
+            <div class="hero-texto-card">
+                <h1>Materiais Didáticos que Encantam</h1>
+                <p>Atividades lúdicas e criativas para professores e alunos, pensadas para tornar o aprendizado mais
+                    divertido e eficaz.</p> <a href="#produtos" class="btn btn-primary">Ver Produtos</a>
+            </div> <!-- Imagens lado a lado -->
+            <div class="hero-imagens"> <img src="imagens/destaques/Destaque1.png" alt="Destaque 1"> <img
+                    src="imagens/destaques/Destaque2.png" alt="Destaque 2"> </div>
         </div>
     </section>
 
     <div class="hero-bottom"></div>
-    </section>
-
-    <!-- PRODUTOS -->
-    <section id="produtos" class="produtos full-screen">
+    
+    <section id="produtos" class="produtos-fullscreen">
         <div class="container">
-            <h3 class="section-title">Materiais disponíveis</h3>
-            <div class="busca-materiais">
-                <input type="text" id="buscaProdutos" placeholder="Buscar material por tema, série ou conteúdo...">
-                <span class="icone-busca">🔍</span>
-            </div>
+            <h2 class="section-title">Materiais disponíveis</h2>
 
-            <div class="produtos-list">
+            <div class="carrossel-wrapper">
+                <button id="prevBtn" class="carrossel-btn prev">←</button>
 
-                <article class="produto-card" data-nome="álbum números naturais">
-                    <img src="img/produto1.jpg" alt="Álbum de Números Naturais">
-                    <h4>Álbum de Números Naturais</h4>
-                    <p class="descricao">Atividade interativa para trabalhar números naturais.</p>
-                    <p class="preco">R$ 4,50</p>
+                <div class="produtos-list-wrapper">
+                    <div id="produtosCarrossel" class="produtos-list"></div>
+                </div>
 
-                    <button class="btn btn-amostra" data-amostra="img/amostra1.jpg">
-                        Ver amostra
-                    </button>
-
-                    <a href="produto.html?id=album-numeros" class="btn btn-comprar">
-                        Ver detalhes
-                    </a>
-                </article>
-
-                <article class="produto-card" data-nome="explosão potências">
-                    <img src="img/produto2.jpg" alt="Explosão de Potências">
-                    <h4>Explosão de Potências</h4>
-                    <p class="descricao">Jogo para fixação de potências.</p>
-                    <p class="preco">R$ 4,50</p>
-
-                    <button class="btn btn-amostra" data-amostra="img/amostra2.jpg">
-                        Ver amostra
-                    </button>
-
-                    <a href="produto.html?id=album-numeros" class="btn btn-comprar">
-                        Ver detalhes
-                    </a>
-                </article>
-
-                <article class="produto-card" data-nome="bingo matemático">
-                    <img src="img/produto3.jpg" alt="Bingo Matemático">
-                    <h4>Bingo Matemático</h4>
-                    <p class="descricao">Bingo educativo para revisão de conteúdos.</p>
-                    <p class="preco">R$ 6,00</p>
-
-                    <button class="btn btn-amostra" data-amostra="img/amostra3.jpg">
-                        Ver amostra
-                    </button>
-
-                    <a href="produto.html?id=album-numeros" class="btn btn-comprar">
-                        Ver detalhes
-                    </a>
-                </article>
-
+                <button id="nextBtn" class="carrossel-btn next">→</button>
             </div>
         </div>
     </section>
 
+    <!-- Modal de amostra -->
+    <div class="modal" id="modalAmostra">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img id="modalImagem" src="" alt="Amostra do material">
+        </div>
+    </div>     
+    
     <!-- SOBRE -->
     <section id="sobre" class="sobre">
         <div class="container">
-
             <h2 class="section-title">Quem está por trás da Raiz Didática</h2>
-
-            <p class="sobre-texto">
-                A Raiz Didática nasceu do trabalho e da dedicação de professoras apaixonadas
-                pelo ensino da Matemática. Todos os materiais são elaborados com qualidade,
-                intencionalidade pedagógica e muito carinho, pensando na prática real da sala de aula.
-            </p>
-
-            <div class="equipe">
-
-                <!-- KARINI -->
-                <div class="prof-card">
-                    <img src="imagens/equipe/karini.jpeg" alt="Profª Karini">
+            <p class="sobre-texto"> A Raiz Didática nasceu do trabalho e da dedicação de professoras apaixonadas pelo
+                ensino da Matemática. Todos os materiais são elaborados com qualidade, intencionalidade pedagógica e
+                muito carinho, pensando na prática real da sala de aula. </p>
+            <div class="equipe"> <!-- KARINI -->
+                <div class="prof-card"> <img src="imagens/equipe/karini.jpeg" alt="Profª Karini">
                     <h3>Profª Karini</h3>
                     <ul>
                         <li>Licenciada em Matemática – UEL</li>
                         <li>Especialista em Tecnologias Aplicadas à Educação</li>
                         <li>Atua como professora da rede particular de Santa Catarina</li>
                     </ul>
-                </div>
-
-                <!-- LUANA -->
-                <div class="prof-card">
-                    <img src="imagens/equipe/luana.jpeg" alt="Profª Luana">
+                </div> <!-- LUANA -->
+                <div class="prof-card"> <img src="imagens/equipe/luana.jpeg" alt="Profª Luana">
                     <h3>Profª Luana</h3>
                     <ul>
                         <li>Licenciada em Matemática – UEL</li>
@@ -153,11 +87,8 @@
                         <li>Especialista em Educação Especial</li>
                         <li>Atua na rede pública e privada do Paraná</li>
                     </ul>
-                </div>
-
-                <!-- TAIS -->
-                <div class="prof-card">
-                    <img src="imagens/equipe/tais.jpeg" alt="Profª Tais">
+                </div> <!-- TAIS -->
+                <div class="prof-card"> <img src="imagens/equipe/tais.jpeg" alt="Profª Tais">
                     <h3>Profª Tais</h3>
                     <ul>
                         <li>Licenciada em Matemática – UTFPR</li>
@@ -165,41 +96,24 @@
                         <li>Atua na Educação Básica da rede estadual do Paraná</li>
                     </ul>
                 </div>
-
             </div>
-
         </div>
-    </section>
-
-    <!-- INSTAGRAM -->
+    </section> <!-- INSTAGRAM -->
     <section id="instagram" class="instagram full-screen">
         <div class="container">
-            <h3 class="section-title">Nos acompanhe no Instagram</h3>
-            <a class="btn btn-instagram" href="https://www.instagram.com/raizdidatica/" target="_blank">
-                @raizdidatica
-            </a>
+            <h3 class="section-title">Nos acompanhe no Instagram</h3> <a class="btn btn-instagram"
+                href="https://www.instagram.com/raizdidatica/" target="_blank"> @raizdidatica </a>
         </div>
-    </section>
-
-    <!-- FOOTER -->
+    </section> <!-- FOOTER -->
     <footer class="footer">
         <p>&copy; 2026 Raiz Didática</p>
-    </footer>
-
-    <!-- MODAL -->
+    </footer> <!-- MODAL -->
     <div class="modal" id="modalAmostra">
         <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <img id="modalImagem" src="" alt="Amostra do material">
-        </div>
+        <div class="modal-content"> <button class="modal-close">&times;</button> <img id="modalImagem" src=""
+                alt="Amostra do material"> </div>
     </div>
-    <div class="scroll-buttons">
-        <button id="scroll-top"><i class="bi bi-arrow-up"></i></button>
-        <button id="scroll-next"><i class="bi bi-arrow-down"></i></button>
-    </div>
-
+    <div class="scroll-buttons"> <button id="scroll-top"><i class="bi bi-arrow-up"></i></button> <button
+            id="scroll-next"><i class="bi bi-arrow-down"></i></button> </div>
     <script src="scripts.js"></script>
 </body>
-
-</html>
