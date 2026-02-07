@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // =========================
     // MODAL
+    // =========================
     const modal = document.getElementById("modalAmostra");
     const modalImg = document.getElementById("modalImagem");
     const closeBtn = document.querySelector(".modal-close");
@@ -9,45 +11,50 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".btn-amostra").forEach(botao => {
         botao.addEventListener("click", () => {
             modalImg.src = botao.dataset.amostra;
-            modal.classList.add("active");
+            modal.classList.add("active"); // precisa ativar a classe
         });
     });
 
-    function fecharModal() {
-        modal.classList.remove("active");
-        modalImg.src = "";
-    }
+    closeBtn.addEventListener("click", () => modal.classList.remove("active"));
+    overlay.addEventListener("click", () => modal.classList.remove("active"));
 
-    closeBtn.addEventListener("click", fecharModal);
-    overlay.addEventListener("click", fecharModal);
-
+    // =========================
     // PESQUISA
-    const inputPesquisa = document.getElementById("pesquisa");
+    // =========================
+    const inputBusca = document.getElementById("buscaProdutos");
     const cards = document.querySelectorAll(".produto-card");
 
-    inputPesquisa.addEventListener("input", () => {
-        const termo = inputPesquisa.value.toLowerCase();
+    inputBusca.addEventListener("input", () => {
+        const termo = inputBusca.value.toLowerCase();
 
         cards.forEach(card => {
-            const nome = card.dataset.nome;
-            card.style.display = nome.includes(termo) ? "flex" : "none";
+            const textoCard = card.innerText.toLowerCase();
+
+            if (textoCard.includes(termo)) {
+                card.style.display = "flex";
+            } else {
+                card.style.display = "none";
+            }
         });
     });
 
-});
-const inputBusca = document.getElementById("buscaProdutos");
-const cards = document.querySelectorAll(".produto-card");
+    // =========================
+    // BOTÃO VOLTAR AO TOPO
+    // =========================
+    const btnTop = document.getElementById("scroll-top");
 
-inputBusca.addEventListener("input", () => {
-    const termo = inputBusca.value.toLowerCase();
-
-    cards.forEach(card => {
-        const textoCard = card.innerText.toLowerCase();
-
-        if (textoCard.includes(termo)) {
-            card.style.display = "flex";
-        } else {
-            card.style.display = "none";
-        }
+    // Clique: rolar para o topo
+    btnTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
+
+    // Atualiza visibilidade ao rolar
+    function updateScrollTopVisibility() {
+        const scrollPos = window.scrollY;
+        btnTop.style.display = (scrollPos > 100) ? "flex" : "none";
+    }
+
+    window.addEventListener("scroll", updateScrollTopVisibility);
+    updateScrollTopVisibility();
+
 });
