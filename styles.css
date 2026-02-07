@@ -1,7 +1,7 @@
 :root {
-  --azul-principal: #4b9fc0;
-  --azul-escuro: #286dbb;
-  --bege-fundo: #f7f5f2;
+  --azul-principal: #96cbe0;   /* destaque / botões / cards */
+  --azul-escuro: #5faec7;      /* títulos / ícones */
+  --bege-fundo: #f6f9fc;       /* fundo real do site */
   --rosa-acento: #e07a8c;
   --texto-principal: #2f2f2f;
 }
@@ -89,7 +89,7 @@ body {
 .hero-top {
   background: linear-gradient(135deg, var(--azul-principal), var(--azul-escuro));
   color: white;
-  padding: 120px 0 90px;
+  padding: 400px 0 90px;
   text-align: center;
 }
 
@@ -155,7 +155,7 @@ body {
 }
 
 .produto-card {
-  background: #ade0f5;
+  background: var(--azul-principal);
   border-radius: 18px;
   padding: 20px;
   text-align: center;
@@ -188,4 +188,101 @@ body {
   .hero-top h1 {
     font-size: 1.8rem;
   }
+}
+/* SOBRE / EQUIPE */
+.sobre {
+  background: var(--bege-fundo);
+  padding: 90px 0;
+}
+
+.sobre-texto {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* GRID EQUIPE */
+.equipe {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD PROFESSORA */
+.prof-card {
+  background: #bfd7f1;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.prof-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--azul-principal);
+  margin-bottom: 15px;
+}
+
+.prof-card h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--azul-escuro);
+  margin-bottom: 15px;
+}
+
+.prof-card ul {
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.prof-card ul li {
+  margin-bottom: 8px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .equipe {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .equipe {
+    grid-template-columns: 1fr;
+  }
+}
+/* BUSCA DE MATERIAIS */
+.busca-materiais {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto 50px;
+}
+
+.busca-materiais input {
+  width: 100%;
+  padding: 14px 48px 14px 20px;
+  border-radius: 30px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.busca-materiais input:focus {
+  border-color: var(--azul-escuro);
+  box-shadow: 0 0 0 4px rgba(150, 203, 224, 0.35);
+}
+
+.icone-busca {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: var(--azul-escuro);
+  pointer-events: none;
 }
