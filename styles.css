@@ -1,7 +1,7 @@
 :root {
-  --azul-principal: #96cbe0;
+  --azul-principal: #267e68;
   /* destaque / botões / cards */
-  --azul-escuro: #5faec7;
+  --azul-escuro: #6ab992;
   /* títulos / ícones */
   --bege-fundo: #f6f9fc;
   /* fundo real do site */
@@ -37,7 +37,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #5faec7;
+  background: #267e68;
   border-bottom: 2px solid #eee;
   z-index: 1000;
 }
@@ -307,7 +307,7 @@ body {
 
 /* CARD PROFESSORA */
 .prof-card {
-  background: #bfd7f1;
+  background: #6ab992;
   border-radius: 20px;
   padding: 30px 20px;
   text-align: center;
