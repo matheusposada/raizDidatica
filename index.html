@@ -2,14 +2,22 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raiz Didática | Materiais de Matemática</title> <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-</head>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Raiz Didática | Materiais de Matemática</title>
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
+            rel="stylesheet">
+
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" type="image/png" href="imagens/logo/logoRaizDidatica.png">
+    </head>
 
 <body> <!-- HEADER FIXO -->
     <header class="header">
@@ -19,7 +27,7 @@
                 <ul class="nav-list">
                     <li><a href="materiais.html">Materiais</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#instagram">Contato</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -104,12 +112,33 @@
                 </div>
             </div>
         </div>
-    </section> <!-- INSTAGRAM -->
-    <section id="instagram" class="instagram full-screen">
-        <div class="container">
-            <h3 class="section-title">Nos acompanhe no Instagram</h3> <a class="btn btn-instagram"
-                href="https://www.instagram.com/raizdidatica/" target="_blank"> @raizdidatica </a>
-        </div>
+        <section id="contato" class="contato full-screen">
+            <div class="container">
+                <h2 class="section-title">Contato</h2>
+                <p>Fale conosco pelo Instagram, WhatsApp ou E-mail</p>
+
+                <div class="contatos">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/raizdidatica/" target="_blank" class="contato-icon">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/5543996592119" target="_blank" class="contato-icon">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+
+                    <!-- E-mail -->
+                    <div class="contato-icon email-card" id="email-card">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                </div>
+
+                <!-- Texto do e-mail -->
+                <div class="email-text" id="email-text">matheusposada@gmail.com</div>
+            </div>
+        </section>
+
     </section> <!-- FOOTER -->
     <footer class="footer">
         <p>&copy; 2026 Raiz Didática</p>
@@ -118,8 +147,6 @@
         <div class="modal-overlay"></div>
         <div class="modal-content"> <button class="modal-close">&times;</button> <img id="modalImagem" src=""
                 alt="Amostra do material"> </div>
-    </div>
-    <div class="scroll-buttons"> <button id="scroll-top"><i class="bi bi-arrow-up"></i></button> <button
-            id="scroll-next"><i class="bi bi-arrow-down"></i></button> </div>
+    </div>    
     <script src="scripts.js"></script>
 </body>

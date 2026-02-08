@@ -6,7 +6,7 @@
   --bege-fundo: #f6f9fc;
   /* fundo real do site */
   --rosa-acento: #e07a8c;
-  --texto-principal: #2f2f2f;
+  --texto-principal: #267e68;
 }
 
 
@@ -55,7 +55,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--texto-principal)e;
+  color: #2f2f2f;
 }
 
 .logo img {
@@ -73,11 +73,11 @@ body {
 .nav-list a {
   text-decoration: none;
   font-weight: 600;
-  color: var(--texto-principal);
+  color: #2f2f2f;
 }
 
 .nav-list a:hover {
-  color: var(--azul-principal);
+  color: #e07a8c;
 }
 
 /* ===== SEÇÃO MATERIAIS ===== */
@@ -272,4 +272,7 @@ body {
     .produto-card {
         max-width: 100%;
     }
+}
+.btn, .btn a {
+    text-decoration: none;
 }

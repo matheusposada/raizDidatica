@@ -72,3 +72,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+// scripts.js
+
+// Seleciona elementos
+const emailCard = document.getElementById("email-card");
+const emailText = document.getElementById("email-text");
+
+// Esconde/exibe o e-mail ao clicar
+emailCard.addEventListener("click", () => {
+    if (emailText.style.display === "block") {
+        emailText.style.display = "none";
+    } else {
+        emailText.style.display = "block";
+    }
+});
