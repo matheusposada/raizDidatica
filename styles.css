@@ -587,3 +587,125 @@ section {
 #produtos .section-title {
     margin-top: 40px; /* afasta o título da imagem de background */
 }
+.busca-materiais {
+  max-width: 400px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+.busca-materiais input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.busca-materiais input:focus {
+  border-color: var(--azul-escuro);
+  box-shadow: 0 0 0 4px rgba(150, 203, 224, 0.35);
+}
+.busca-materiais {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto 40px;
+}
+
+.busca-materiais input {
+  width: 100%;
+  padding: 12px 45px 12px 20px; /* espaço para o ícone */
+  border-radius: 30px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.busca-materiais input:focus {
+  border-color: var(--azul-escuro);
+  box-shadow: 0 0 0 4px rgba(150, 203, 224, 0.35);
+}
+
+.icone-busca {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: var(--azul-escuro);
+  pointer-events: none; /* não interfere na digitação */
+  transition: color 0.3s ease;
+}
+
+.busca-materiais input:focus + .icone-busca {
+  color: var(--rosa-acento);
+}
+.produtos-list-wrapper {
+    overflow: hidden;
+}
+
+.produtos-list {
+    display: flex; 
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.produto-card {
+    min-width: 200px; /* largura mínima do card */
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 15px;
+    text-align: center;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.carrossel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: var(--azul-escuro);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carrossel-btn:hover {
+    background: var(--rosa-acento);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carrossel-btn.prev {
+    left: -25px;
+}
+
+.carrossel-btn.next {
+    right: -25px;
+}
+
+#produtosCarrossel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}

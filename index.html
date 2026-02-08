@@ -17,7 +17,7 @@
                     alt="Raiz Didática"> <span>Raiz Didática</span> </a>
             <nav>
                 <ul class="nav-list">
-                    <li><a href="#produtos">Materiais</a></li>
+                    <li><a href="materiais.html">Materiais</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#instagram">Contato</a></li>
                 </ul>
@@ -29,7 +29,8 @@
             <div class="hero-texto-card">
                 <h1>Materiais Didáticos que Encantam</h1>
                 <p>Atividades lúdicas e criativas para professores e alunos, pensadas para tornar o aprendizado mais
-                    divertido e eficaz.</p> <a href="#produtos" class="btn btn-primary">Ver Produtos</a>
+                    divertido e eficaz.</p>
+                <li><a href="materiais.html" class="btn btn-primary">Ver Produtos</a>
             </div> <!-- Imagens lado a lado -->
             <div class="hero-imagens"> <img src="imagens/destaques/Destaque1.png" alt="Destaque 1"> <img
                     src="imagens/destaques/Destaque2.png" alt="Destaque 2"> </div>
@@ -37,11 +38,16 @@
     </section>
 
     <div class="hero-bottom"></div>
-    
     <section id="produtos" class="produtos-fullscreen">
         <div class="container">
             <h2 class="section-title">Materiais disponíveis</h2>
 
+            <!-- Campo de busca (opcional) -->
+            <div class="busca-materiais">
+                <input type="text" id="buscaProdutos" placeholder="Busque pelo nome do material...">
+            </div>
+
+            <!-- Carrossel -->
             <div class="carrossel-wrapper">
                 <button id="prevBtn" class="carrossel-btn prev">←</button>
 
@@ -61,8 +67,8 @@
             <button class="modal-close">&times;</button>
             <img id="modalImagem" src="" alt="Amostra do material">
         </div>
-    </div>     
-    
+    </div>
+
     <!-- SOBRE -->
     <section id="sobre" class="sobre">
         <div class="container">

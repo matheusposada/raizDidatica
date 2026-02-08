@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos os Materiais | Raiz Didática</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="materiais.css">
+</head>
+
+<body>
+    <!-- HEADER FIXO -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="imagens/logo/logoRaizDidatica.png" alt="Raiz Didática">
+                <span>Raiz Didática</span>
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="materiais.html">Materiais</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#instagram">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEÇÃO MATERIAIS -->
+    <section id="materiais" class="produtos-fullscreen">
+        <div class="container">
+            <h2 class="section-title">Todos os Materiais</h2>
+
+            <!-- BUSCA -->
+            <div class="busca-container">
+                <input type="text" id="buscaProdutos" placeholder="Buscar material...">
+            </div>
+
+            <!-- PRODUTOS -->
+            <div id="produtosCarrossel" class="produtos-list"></div>
+        </div>
+    </section>
+
+    <!-- Modal de amostra -->
+    <div class="modal" id="modalAmostra">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img id="modalImagem" src="" alt="Amostra do material">
+        </div>
+    </div>
+
+    <script src="materiais.js"></script>
+</body>
+
+</html>
