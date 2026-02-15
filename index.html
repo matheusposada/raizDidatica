@@ -147,6 +147,29 @@
         <div class="modal-overlay"></div>
         <div class="modal-content"> <button class="modal-close">&times;</button> <img id="modalImagem" src=""
                 alt="Amostra do material"> </div>
-    </div>    
+    </div>
+    <!-- BOTÃO CARRINHO -->
+    <div class="carrinho-icon" id="abrirCarrinho">
+        🛍️ <span id="contadorCarrinho">0</span>
+    </div>
+
+    <!-- CARRINHO LATERAL -->
+    <div class="carrinho-overlay" id="carrinhoOverlay"></div>
+
+    <div class="carrinho" id="carrinho">
+        <div class="carrinho-header">
+            <h3>Seu Carrinho</h3>
+            <button id="fecharCarrinho">✕</button>
+        </div>
+
+        <div class="carrinho-itens" id="carrinhoItens"></div>
+
+        <div class="carrinho-footer">
+            <p>Total: <strong id="carrinhoTotal">R$ 0,00</strong></p>
+            <button class="btn-finalizar">Finalizar Compra</button>
+        </div>
+    </div>
+    
     <script src="scripts.js"></script>
+
 </body>
