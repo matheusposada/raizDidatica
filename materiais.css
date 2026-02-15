@@ -1,12 +1,12 @@
 :root {
-  --azul-principal: #267e68;
-  /* destaque / botões / cards */
-  --azul-escuro: #6ab992;
-  /* títulos / ícones */
-  --bege-fundo: #f6f9fc;
-  /* fundo real do site */
-  --rosa-acento: #e07a8c;
-  --texto-principal: #267e68;
+    --azul-principal: #267e68;
+    /* destaque / botões / cards */
+    --azul-escuro: #6ab992;
+    /* títulos / ícones */
+    --bege-fundo: #f6f9fc;
+    /* fundo real do site */
+    --rosa-acento: #e07a8c;
+    --texto-principal: #267e68;
 }
 
 
@@ -15,69 +15,69 @@
 
 /* BASE */
 body {
-  font-family: 'Nunito', sans-serif;
-  background: var(--bege-fundo);
-  color: var(--texto-principal);
-  padding-top: 96px;
-  /* altura real do header */
+    font-family: 'Nunito', sans-serif;
+    background: var(--bege-fundo);
+    color: var(--texto-principal);
+    padding-top: 96px;
+    /* altura real do header */
 }
 
 .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
 }
 
 /* HEADER */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #267e68;
-  border-bottom: 2px solid #eee;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #267e68;
+    border-bottom: 2px solid #eee;
+    z-index: 1000;
 }
 
 .header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
 }
 
 /* LOGO */
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #2f2f2f;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2f2f2f;
 }
 
 .logo img {
-  height: 64px;
-  width: auto;
+    height: 64px;
+    width: auto;
 }
 
 /* MENU */
 .nav-list {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-list a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #2f2f2f;
+    text-decoration: none;
+    font-weight: 600;
+    color: #2f2f2f;
 }
 
 .nav-list a:hover {
-  color: #e07a8c;
+    color: #e07a8c;
 }
 
 /* ===== SEÇÃO MATERIAIS ===== */
@@ -273,6 +273,86 @@ body {
         max-width: 100%;
     }
 }
-.btn, .btn a {
+
+.btn,
+.btn a {
     text-decoration: none;
+}
+
+/* ===== FILTROS ===== */
+.filtros-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.btn-filtro {
+    padding: 10px 18px;
+    border-radius: 25px;
+    border: 2px solid var(--azul-principal);
+    background: white;
+    color: var(--azul-principal);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.btn-filtro:hover {
+    background: var(--azul-principal);
+    color: white;
+}
+
+/* Botão ativo */
+.btn-filtro.active {
+    background: var(--rosa-acento);
+    border-color: var(--rosa-acento);
+    color: white;
+}
+/* ===== FILTROS ===== */
+
+.filtros-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+/* Botão padrão */
+.btn-filtro {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid var(--azul-principal);
+    background: white;
+    color: var(--azul-principal);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.btn-filtro:hover {
+    background: var(--azul-principal);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Ativo */
+.btn-filtro.active {
+    background: linear-gradient(135deg, var(--azul-principal), var(--azul-escuro));
+    border-color: var(--azul-principal);
+    color: white;
+    box-shadow: 0 6px 15px rgba(38, 126, 104, 0.3);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .btn-filtro {
+        font-size: 0.8rem;
+        padding: 8px 14px;
+    }
 }
