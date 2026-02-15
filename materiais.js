@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-
     const produtosData = [
         { id: "escola-area", titulo: "Álbum de área - escola", categoria: "Área", descricao: "Área", preco: "R$ 4,50", imagem: "imagens/produtos/produto1.jpg", amostra: "imagens/amostras/amostra1.jpg" },
         { id: "decomposicao", titulo: "Decomposição em fatores primos - Stitch", categoria: "Decomposição em fatores primos", descricao: "Decomposição em fatores primos", preco: "R$ 4,50", imagem: "imagens/produtos/produto2.jpg", amostra: "imagens/amostras/amostra2.jpg" },
@@ -63,6 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "sondagem-9ano", titulo: "Sondagem - 9º ano", categoria: "Volta às aulas", descricao: "Volta às aulas", preco: "R$ 5,50", imagem: "imagens/produtos/produto4.jpg", amostra: "imagens/amostras/amostra4.jpg" },
         { id: "volta-subtracao", titulo: "Subtração", categoria: "Volta às aulas", descricao: "Volta às aulas", preco: "R$ 5,50", imagem: "imagens/produtos/produto4.jpg", amostra: "imagens/amostras/amostra4.jpg" },
     ];
+
+    document.addEventListener("DOMContentLoaded", () => {
 
 
     const produtosList = document.getElementById("produtosCarrossel");
