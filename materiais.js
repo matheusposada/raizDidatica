@@ -421,7 +421,7 @@ document.addEventListener("DOMContentLoaded", () => {
             categoria: "Radiação",
             preco: "R$ 5,50",
             imagem: "imagens/amostras/trilha-gatinho-radiacao.png",
-            amostra: "imagens/amostras/trilha-gatinho-radicacao.png"
+            amostra: "imagens/amostras/trilha-gatinho-radiacao.png"
         },
         {
             id: "scooby-doo-radiacao",
@@ -429,7 +429,7 @@ document.addEventListener("DOMContentLoaded", () => {
             categoria: "Radiação",
             preco: "R$ 5,50",
             imagem: "imagens/amostras/scooby-doo-radiacao.png",
-            amostra: "imagens/amostras/scooby-doo-radicacao.png"
+            amostra: "imagens/amostras/scooby-doo-radiacao.png"
         },
         {
             id: "simpsons-regra-de-tres",
@@ -490,6 +490,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filtrosContainer = document.getElementById("filtrosContainer");
     const modal = document.getElementById("modalAmostra");
     const modalImg = document.getElementById("modalImagem");
+    const modalMensagem = document.getElementById("modalMensagem"); // ✅ adicionado
     const closeBtn = modal?.querySelector(".modal-close");
     const modalOverlay = modal?.querySelector(".modal-overlay");
     const carrinhoEl = document.getElementById("carrinho");
@@ -509,11 +510,14 @@ document.addEventListener("DOMContentLoaded", () => {
         card.className = "produto-card";
         card.dataset.categoria = p.categoria;
         card.innerHTML = `
-            <img src="${p.imagem}" alt="${p.titulo}">
+            ${p.imagem                                          // ✅ trata imagem null
+            ? `<img src="${p.imagem}" alt="${p.titulo}">`
+            : `<div class="produto-sem-imagem">📄</div>`
+        }
             <h4>${p.titulo}</h4>
             <p class="categoria">${p.categoria}</p>
             <p class="preco">${p.preco}</p>
-            <button class="btn btn-amostra" data-amostra="${p.amostra}">Ver amostra</button>
+            <button class="btn btn-amostra" data-amostra="${p.amostra ?? ''}">Ver amostra</button>
             <button class="btn btn-comprar" data-id="${p.id}">Adicionar ao carrinho</button>
         `;
         produtosList.appendChild(card);
@@ -523,8 +527,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // MODAL
     // ==============================
 
-    function abrirModal(src) {
-        modalImg.src = src;
+    function abrirModal(src) {                                  // ✅ trata amostra null
+        if (src) {
+            modalImg.src = src;
+            modalImg.style.display = "block";
+            modalMensagem.style.display = "none";
+        } else {
+            modalImg.style.display = "none";
+            modalMensagem.style.display = "flex";
+        }
         modal.classList.add("active");
         modal.setAttribute("aria-hidden", "false");
         closeBtn?.focus();
@@ -538,6 +549,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeBtn?.addEventListener("click", fecharModal);
     modalOverlay?.addEventListener("click", fecharModal);
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            if (modal.classList.contains("active")) fecharModal();
+            if (carrinhoEl.classList.contains("active")) fecharCarrinho();
+        }
+    });
+
+    // ==============================
+    // BUSCA
+    // ==============================
+
+    function filtrarCards(termo = "", categoria = "todos") {
+        produtosList.querySelectorAll(".produto-card").forEach(card => {
+            const titulo = card.querySelector("h4").innerText.toLowerCase();
+            const cat = card.dataset.categoria;
+            const buscaOk = titulo.includes(termo);
+            const filtroOk = categoria === "todos" || cat === categoria;
+            card.style.display = (buscaOk && filtroOk) ? "flex" : "none";
+        });
+    }
+
+    let categoriaAtiva = "todos";
+
+    inputBusca?.addEventListener("input", () => {
+        filtrarCards(inputBusca.value.toLowerCase(), categoriaAtiva);
+    });
+
+    // ==============================
+    // FILTROS
+    // ==============================
+
+    if (filtrosContainer) {
+        const categorias = [...new Set(produtosData.map(p => p.categoria))];
+
+        filtrosContainer.innerHTML = `<button class="btn-filtro active" data-categoria="todos">Todos</button>`;
+
+        categorias.forEach(cat => {
+            filtrosContainer.innerHTML += `<button class="btn-filtro" data-categoria="${cat}">${cat}</button>`;
+        });
+
+        filtrosContainer.addEventListener("click", (e) => {
+            if (!e.target.classList.contains("btn-filtro")) return;
+
+            filtrosContainer.querySelectorAll(".btn-filtro").forEach(btn =>
+                btn.classList.remove("active")
+            );
+            e.target.classList.add("active");
+
+            categoriaAtiva = e.target.dataset.categoria;
+            filtrarCards(inputBusca?.value.toLowerCase() ?? "", categoriaAtiva);
+        });
+    }
 
     // ==============================
     // CARRINHO
@@ -619,71 +683,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ==============================
-    // BUSCA
-    // ==============================
-
-    function filtrarCards(termo = "", categoria = "todos") {
-        produtosList.querySelectorAll(".produto-card").forEach(card => {
-            const titulo = card.querySelector("h4").innerText.toLowerCase();
-            const cat = card.dataset.categoria;
-            const buscaOk = titulo.includes(termo);
-            const filtroOk = categoria === "todos" || cat === categoria;
-            card.style.display = (buscaOk && filtroOk) ? "flex" : "none";
-        });
-    }
-
-    let categoriaAtiva = "todos";
-
-    inputBusca?.addEventListener("input", () => {
-        filtrarCards(inputBusca.value.toLowerCase(), categoriaAtiva);
-    });
-
-    // ==============================
-    // FILTROS
-    // ==============================
-
-    if (filtrosContainer) {
-        const categorias = [...new Set(produtosData.map(p => p.categoria))];
-
-        filtrosContainer.innerHTML = `<button class="btn-filtro active" data-categoria="todos">Todos</button>`;
-
-        categorias.forEach(cat => {
-            filtrosContainer.innerHTML += `<button class="btn-filtro" data-categoria="${cat}">${cat}</button>`;
-        });
-
-        filtrosContainer.addEventListener("click", (e) => {
-            if (!e.target.classList.contains("btn-filtro")) return;
-
-            filtrosContainer.querySelectorAll(".btn-filtro").forEach(btn =>
-                btn.classList.remove("active")
-            );
-            e.target.classList.add("active");
-
-            categoriaAtiva = e.target.dataset.categoria;
-            filtrarCards(inputBusca?.value.toLowerCase() ?? "", categoriaAtiva);
-        });
-    }
-
-    // ==============================
     // DELEGAÇÃO DE EVENTOS UNIFICADA
     // ==============================
 
     document.addEventListener("click", (e) => {
         if (e.target.classList.contains("btn-amostra")) {
-            abrirModal(e.target.dataset.amostra);
+            const src = e.target.dataset.amostra || null;
+            abrirModal(src);
         }
         if (e.target.classList.contains("btn-comprar")) {
             adicionarAoCarrinho(e.target.dataset.id);
         }
         if (e.target.classList.contains("remover-item")) {
             removerItem(e.target.dataset.id);
-        }
-    });
-
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-            if (modal.classList.contains("active")) fecharModal();
-            if (carrinhoEl.classList.contains("active")) fecharCarrinho();
         }
     });
 
