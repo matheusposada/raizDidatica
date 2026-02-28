@@ -5,81 +5,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todos os Materiais | Raiz Didática</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap"
-        rel="stylesheet">
+
+    <!-- Preconnect melhora velocidade de carregamento das fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="materiais.css">
     <link rel="icon" type="image/png" href="imagens/logo/logoRaizDidatica.png">
 </head>
 
 <body>
-    <!-- HEADER FIXO -->
-    <header class="header">
-        <div class="container header-content">
-            <a href="index.html" class="logo">
-                <img src="imagens/logo/logoRaizDidatica.png" alt="Raiz Didática">
-                <span>Raiz Didática</span>
-            </a>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="materiais.html">Materiais</a></li>
-                    <li><a href="index.html#sobre">Sobre</a></li>
-                    <li><a href="index.html#contato">Contato</a></li>
-                </ul>
-            </nav>
+
+<!-- HEADER FIXO -->
+<header class="header">
+    <div class="container header-content">
+        <a href="index.html" class="logo">
+            <img src="imagens/logo/logoRaizDidatica.png" alt="Raiz Didática - página inicial" width="64" height="64">
+            <span>Raiz Didática</span>
+        </a>
+        <nav aria-label="Menu principal">
+            <ul class="nav-list">
+                <li><a href="materiais.html" aria-current="page">Materiais</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- CONTEÚDO PRINCIPAL -->
+<main id="materiais" class="produtos-fullscreen">
+    <div class="container">
+        <h2 class="section-title">Todos os Materiais</h2>
+
+        <!-- BUSCA -->
+        <div class="busca-container">
+            <label for="buscaProdutos" class="sr-only">Buscar material</label>
+            <input type="text" id="buscaProdutos" placeholder="Buscar material...">
         </div>
-    </header>
 
-    <!-- SEÇÃO MATERIAIS -->
-    <section id="materiais" class="produtos-fullscreen">
-        <div class="container">
-            <h2 class="section-title">Todos os Materiais</h2>
+        <!-- FILTROS -->
+        <div class="filtros-container" id="filtrosContainer" role="group" aria-label="Filtrar por categoria"></div>
 
-            <!-- BUSCA -->
-            <div class="busca-container">
-                <input type="text" id="buscaProdutos" placeholder="Buscar material...">
-            </div>
+        <!-- PRODUTOS -->
+        <div id="produtosCarrossel" class="produtos-list" aria-live="polite" aria-label="Lista de materiais"></div>
+    </div>
+</main>
 
-            <!-- FILTROS -->
-            <div class="filtros-container" id="filtrosContainer"></div>
+<!-- MODAL DE AMOSTRA -->
+<div class="modal" id="modalAmostra" role="dialog" aria-modal="true" aria-labelledby="modalTitulo" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <h2 id="modalTitulo" class="sr-only">Amostra do material</h2>
+        <button class="modal-close" aria-label="Fechar amostra">&times;</button>
+        <img id="modalImagem" src="" alt="">
 
-            <!-- PRODUTOS -->
-            <div id="produtosCarrossel" class="produtos-list"></div>
-        </div>
-    </section>
-
-    <!-- Modal de amostra -->
-    <div class="modal" id="modalAmostra">
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close">&times;</button>
-            <img id="modalImagem" src="" alt="Amostra do material">
+        <!-- ✅ ADICIONAR ISSO -->
+        <div id="modalMensagem" class="modal-sem-amostra" style="display:none;">
+            <span>🛠️</span>
+            <p>Estamos trabalhando nisso!</p>
+            <small>Em breve a amostra estará disponível.</small>
         </div>
     </div>
+</div>
 
-    <!-- BOTÃO CARRINHO -->
-    <div class="carrinho-icon" id="abrirCarrinho">
-        🛍️ <span id="contadorCarrinho">0</span>
+<!-- BOTÃO CARRINHO -->
+<button class="carrinho-icon" id="abrirCarrinho" aria-label="Abrir carrinho de compras">
+    🛍️ <span id="contadorCarrinho" aria-live="polite">0</span>
+</button>
+
+<!-- OVERLAY CARRINHO -->
+<div class="carrinho-overlay" id="carrinhoOverlay" aria-hidden="true"></div>
+
+<!-- CARRINHO LATERAL -->
+<div
+        class="carrinho"
+        id="carrinho"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Carrinho de compras"
+        aria-hidden="true"
+>
+    <div class="carrinho-header">
+        <h3>Seu Carrinho</h3>
+        <button id="fecharCarrinho" aria-label="Fechar carrinho">✕</button>
     </div>
 
-    <!-- CARRINHO LATERAL -->
-    <div class="carrinho-overlay" id="carrinhoOverlay"></div>
+    <div class="carrinho-itens" id="carrinhoItens" aria-live="polite"></div>
 
-    <div class="carrinho" id="carrinho">
-        <div class="carrinho-header">
-            <h3>Seu Carrinho</h3>
-            <button id="fecharCarrinho">✕</button>
-        </div>
-
-        <div class="carrinho-itens" id="carrinhoItens"></div>
-
-        <div class="carrinho-footer">
-            <p>Total: <strong id="carrinhoTotal">R$ 0,00</strong></p>
-            <button class="btn-finalizar">Finalizar Compra</button>
-        </div>
+    <div class="carrinho-footer">
+        <p>Total: <strong id="carrinhoTotal">R$ 0,00</strong></p>
+        <button class="btn-finalizar" type="button">Finalizar Compra</button>
     </div>
+</div>
 
-    <script src="materiais.js"></script>
+<script src="materiais.js"></script>
 </body>
 
 </html>
