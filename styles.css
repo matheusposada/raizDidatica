@@ -1,6 +1,4 @@
-/* ========================= */
-/* VARIÁVEIS E RESET         */
-/* ========================= */
+/* ========================= */ /* VARIÁVEIS E RESET */ /* ========================= */
 :root {
     --verde-principal: #267e68;
     --verde-claro: #6ab992;
@@ -15,9 +13,7 @@
     box-sizing: border-box;
 }
 
-/* ========================= */
-/* BASE                      */
-/* ========================= */
+/* ========================= */ /* BASE */ /* ========================= */
 body {
     font-family: 'Nunito', sans-serif;
     background: var(--fundo);
@@ -35,17 +31,13 @@ section {
     scroll-margin-top: 110px;
 }
 
-/* ========================= */
-/* ACESSIBILIDADE            */
-/* ========================= */
+/* ========================= */ /* ACESSIBILIDADE */ /* ========================= */
 :focus-visible {
     outline: 3px solid var(--rosa-acento);
     outline-offset: 3px;
 }
 
-/* ========================= */
-/* HEADER                    */
-/* ========================= */
+/* ========================= */ /* HEADER */ /* ========================= */
 .header {
     position: fixed;
     top: 0;
@@ -63,9 +55,7 @@ section {
     padding: 16px 0;
 }
 
-/* ========================= */
-/* LOGO                      */
-/* ========================= */
+/* ========================= */ /* LOGO */ /* ========================= */
 .logo {
     display: flex;
     align-items: center;
@@ -82,9 +72,7 @@ section {
     width: auto;
 }
 
-/* ========================= */
-/* MENU                      */
-/* ========================= */
+/* ========================= */ /* MENU */ /* ========================= */
 .nav-list {
     list-style: none;
     display: flex;
@@ -101,17 +89,16 @@ section {
     color: var(--rosa-acento);
 }
 
-/* ========================= */
-/* HERO                      */
-/* ========================= */
+/* ========================= */ /* HERO */ /* ========================= */
 .hero-home {
     display: flex;
     justify-content: center;
     padding: 40px 20px;
     min-height: 55vh;
-    background: url('imagens/desenhoSecaoPrincipal/desenho.png') center/cover no-repeat;
+    background: url('imagens/desenhoSecaoPrincipal/desenho2.png') center/cover no-repeat;
     position: relative;
     align-items: center;
+    padding-top: 90px; /* ajuste para a altura real do seu header */
 }
 
 .hero-grid {
@@ -125,19 +112,18 @@ section {
 
 .hero-texto-card {
     flex: 1;
-    max-width: 380px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(8px);
+    border: 2px solid var(--verde-principal);
     border-radius: 25px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 0 4px rgba(38, 126, 104, 0.15);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     text-align: center;
-    height: 380px;
 }
 
 .hero-texto-card h1 {
@@ -188,7 +174,8 @@ section {
     width: 100%;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--verde-principal);
+    box-shadow: 0 0 0 4px rgba(38, 126, 104, 0.15);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -197,9 +184,7 @@ section {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-/* ========================= */
-/* BOTÕES                    */
-/* ========================= */
+/* ========================= */ /* BOTÕES */ /* ========================= */
 .btn {
     padding: 12px 22px;
     border-radius: 30px;
@@ -208,8 +193,7 @@ section {
     font-weight: 600;
 }
 
-.btn,
-.btn a {
+.btn, .btn a {
     text-decoration: none;
 }
 
@@ -231,9 +215,7 @@ section {
     margin-bottom: 10px;
 }
 
-/* ========================= */
-/* SEÇÃO TÍTULOS             */
-/* ========================= */
+/* ========================= */ /* SEÇÃO TÍTULOS */ /* ========================= */
 .section-title {
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -241,19 +223,14 @@ section {
     margin-bottom: 40px;
 }
 
-/* ========================= */
-/* PRODUTOS / CARROSSEL      */
-/* ========================= */
+/* ========================= */ /* PRODUTOS / CARROSSEL */ /* ========================= */
 .produtos {
     padding: 80px 0;
-}
-
-#produtos {
     padding-top: 120px;
     padding-bottom: 80px;
 }
 
-#produtos .section-title {
+.section-title {
     margin-top: 40px;
 }
 
@@ -307,8 +284,7 @@ section {
     overflow: hidden;
 }
 
-.produtos-list,
-#produtosCarrossel {
+.produtos-list, #produtosCarrossel {
     display: flex;
     gap: 20px;
     transition: transform 0.3s ease;
@@ -386,9 +362,7 @@ section {
     right: -25px;
 }
 
-/* ========================= */
-/* SOBRE / EQUIPE            */
-/* ========================= */
+/* ========================= */ /* SOBRE / EQUIPE */ /* ========================= */
 .sobre {
     background: var(--fundo);
     padding: 90px 0;
@@ -440,9 +414,7 @@ section {
     margin-bottom: 8px;
 }
 
-/* ========================= */
-/* CONTATO                   */
-/* ========================= */
+/* ========================= */ /* CONTATO */ /* ========================= */
 .contato {
     padding: 120px 20px;
     background: #f6f9fc;
@@ -517,9 +489,7 @@ section {
     color: #267e68;
 }
 
-/* ========================= */
-/* MODAL                     */
-/* ========================= */
+/* ========================= */ /* MODAL */ /* ========================= */
 .modal {
     position: fixed;
     top: 0;
@@ -599,48 +569,7 @@ section {
     color: #777;
 }
 
-/* ========================= */
-/* BOTÃO VOLTAR AO TOPO      */
-/* ========================= */
-#scroll-top {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 50px;
-    height: 50px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 50%;
-    background: var(--verde-principal);
-    color: white;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-    opacity: 0.9;
-    font-size: 24px;
-    z-index: 10000;
-}
-
-#scroll-top.visible {
-    display: flex;
-}
-
-#scroll-top:hover {
-    transform: scale(1.2);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    opacity: 1;
-}
-
-#scroll-top::before {
-    content: "↑";
-    color: white;
-    font-size: 24px;
-}
-
-/* ========================= */
-/* CARRINHO                  */
-/* ========================= */
+/* ========================= */ /* CARRINHO */ /* ========================= */
 .carrinho-icon {
     position: fixed;
     top: 20px;
@@ -781,17 +710,13 @@ section {
     transform: scale(0.98);
 }
 
-/* ========================= */
-/* FOOTER                    */
-/* ========================= */
+/* ========================= */ /* FOOTER */ /* ========================= */
 .footer {
     text-align: center;
     padding: 20px;
 }
 
-/* ========================= */
-/* MEDIA QUERIES             */
-/* ========================= */
+/* ========================= */ /* MEDIA QUERIES */ /* ========================= */
 @media (max-width: 900px) {
     .hero-grid {
         flex-direction: column-reverse;
@@ -868,5 +793,92 @@ section {
     .contatos {
         flex-direction: column;
         gap: 20px;
+    }
+}
+
+/* ========================= */ /* HERO - AJUSTE MOBILE */ /* ========================= */
+@media (max-width: 768px) {
+    /* Empilha tudo */
+    .hero-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Remove imagem 1 */
+    .hero-imagens img:first-child {
+        display: none;
+    }
+
+    /* Organiza imagens */
+    .hero-imagens {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Diminui imagem 2 */
+    .hero-imagens img {
+        width: 75%; /* controla o tamanho */
+        max-width: 280px; /* limite máximo */
+        height: auto;
+    }
+
+    /* Ajusta card de texto */
+    .hero-texto-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    /* Deixa botão por último */
+    .hero-texto-card ul {
+        margin-top: 10px;
+    }
+}
+
+/* ========================= */ /* HEADER MOBILE SIMPLES */ /* ========================= */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px; /* ajusta espaço do header fixo */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 0;
+    }
+
+    /* Logo menor */
+    .logo {
+        font-size: 1rem;
+        gap: 6px;
+    }
+
+    .logo img {
+        height: 22px;
+    }
+
+    /* Menu abaixo da logo */
+    .nav-list {
+        flex-direction: row;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .nav-list a {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    /* Ajuste do carrinho */
+    .carrinho-icon {
+        top: 12px;
+        right: 12px;
+        padding: 8px 12px;
+        font-size: 0.85rem;
     }
 }

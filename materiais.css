@@ -491,6 +491,14 @@ body {
 }
 
 /* ========================= */
+/* FOOTER                    */
+/* ========================= */
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* ========================= */
 /* MEDIA QUERIES             */
 /* ========================= */
 @media (max-width: 768px) {
@@ -515,4 +523,52 @@ body {
     background: #f0f0f0;
     min-height: 150px;
     object-fit: cover;
+}
+
+/* ========================= */
+/* HEADER MOBILE SIMPLES     */
+/* ========================= */
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 80px; /* ajusta espaço do header fixo */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 0;
+    }
+
+    /* Logo menor */
+    .logo {
+        font-size: 1rem;
+        gap: 6px;
+    }
+
+    .logo img {
+        height: 22px;
+    }
+
+    /* Menu abaixo da logo */
+    .nav-list {
+        flex-direction: row;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .nav-list a {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    /* Ajuste do carrinho */
+    .carrinho-icon {
+        top: 12px;
+        right: 12px;
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
 }
