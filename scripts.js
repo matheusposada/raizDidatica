@@ -421,7 +421,7 @@ document.addEventListener("DOMContentLoaded", () => {
             categoria: "Radiação",
             preco: "R$ 5,50",
             imagem: "imagens/amostras/trilha-gatinho-radiacao.png",
-            amostra: "imagens/amostras/trilha-gatinho-radicacao.png"
+            amostra: "imagens/amostras/trilha-gatinho-radiacao.png"
         },
         {
             id: "scooby-doo-radiacao",
@@ -429,7 +429,7 @@ document.addEventListener("DOMContentLoaded", () => {
             categoria: "Radiação",
             preco: "R$ 5,50",
             imagem: "imagens/amostras/scooby-doo-radiacao.png",
-            amostra: "imagens/amostras/scooby-doo-radicacao.png"
+            amostra: "imagens/amostras/scooby-doo-radiacao.png"
         },
         {
             id: "simpsons-regra-de-tres",
@@ -503,6 +503,49 @@ document.addEventListener("DOMContentLoaded", () => {
     const contadorCarrinho = document.getElementById("contadorCarrinho");
     const emailCard = document.getElementById("email-card");
     const emailText = document.getElementById("email-text");
+    const hamburger = document.getElementById("hamburger");
+
+    // ==============================
+    // MENU HAMBURGUER
+    // ==============================
+
+    // Cria o dropdown dinamicamente e insere após o header
+    const navDropdown = document.createElement("ul");
+    navDropdown.className = "nav-dropdown";
+    navDropdown.innerHTML = `
+        <li><a href="/materiais">Materiais</a></li>
+        <li><a href="/#sobre">Sobre</a></li>
+        <li><a href="/#contato">Contato</a></li>
+    `;
+    document.querySelector(".header").appendChild(navDropdown);
+
+    function fecharMenu() {
+        hamburger?.classList.remove("open");
+        navDropdown.classList.remove("open");
+        hamburger?.setAttribute("aria-expanded", "false");
+    }
+
+    hamburger?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = navDropdown.classList.contains("open");
+        if (isOpen) {
+            fecharMenu();
+        } else {
+            hamburger.classList.add("open");
+            navDropdown.classList.add("open");
+            hamburger.setAttribute("aria-expanded", "true");
+        }
+    });
+
+    // fecha ao clicar em um link do menu
+    navDropdown.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", fecharMenu);
+    });
+
+    // fecha ao clicar fora
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".header")) fecharMenu();
+    });
 
     // ==============================
     // CRIAR CARDS
@@ -538,7 +581,6 @@ document.addEventListener("DOMContentLoaded", () => {
             modalImg.style.display = "none";
             modalMensagem.style.display = "flex";
         }
-
         modal.classList.add("active");
         modal.setAttribute("aria-hidden", "false");
         closeBtn?.focus();
@@ -557,6 +599,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "Escape") {
             if (modal.classList.contains("active")) fecharModal();
             if (carrinhoEl.classList.contains("active")) fecharCarrinho();
+            fecharMenu();
         }
     });
 
@@ -656,7 +699,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const precoNumerico = parseFloat(
                 item.preco.replace("R$", "").trim().replace(",", ".")
             );
-
             total += precoNumerico * item.qtd;
             quantidadeTotal += item.qtd;
 
@@ -696,4 +738,3 @@ document.addEventListener("DOMContentLoaded", () => {
     atualizarCarrinhoUI();
 
 });
-

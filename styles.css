@@ -1,4 +1,6 @@
-/* ========================= */ /* VARIÁVEIS E RESET */ /* ========================= */
+/* ========================= */
+/* VARIÁVEIS E RESET         */
+/* ========================= */
 :root {
     --verde-principal: #267e68;
     --verde-claro: #6ab992;
@@ -13,7 +15,9 @@
     box-sizing: border-box;
 }
 
-/* ========================= */ /* BASE */ /* ========================= */
+/* ========================= */
+/* BASE                      */
+/* ========================= */
 body {
     font-family: 'Nunito', sans-serif;
     background: var(--fundo);
@@ -31,13 +35,29 @@ section {
     scroll-margin-top: 110px;
 }
 
-/* ========================= */ /* ACESSIBILIDADE */ /* ========================= */
+/* ========================= */
+/* ACESSIBILIDADE            */
+/* ========================= */
 :focus-visible {
     outline: 3px solid var(--rosa-acento);
     outline-offset: 3px;
 }
 
-/* ========================= */ /* HEADER */ /* ========================= */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ========================= */
+/* HEADER                    */
+/* ========================= */
 .header {
     position: fixed;
     top: 0;
@@ -55,7 +75,9 @@ section {
     padding: 16px 0;
 }
 
-/* ========================= */ /* LOGO */ /* ========================= */
+/* ========================= */
+/* LOGO                      */
+/* ========================= */
 .logo {
     display: flex;
     align-items: center;
@@ -72,7 +94,9 @@ section {
     width: auto;
 }
 
-/* ========================= */ /* MENU */ /* ========================= */
+/* ========================= */
+/* MENU DESKTOP              */
+/* ========================= */
 .nav-list {
     list-style: none;
     display: flex;
@@ -89,16 +113,93 @@ section {
     color: var(--rosa-acento);
 }
 
-/* ========================= */ /* HERO */ /* ========================= */
+/* ========================= */
+/* HAMBURGUER                */
+/* ========================= */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 1002;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* animação X ao abrir */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* DROPDOWN MOBILE */
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #267e68;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 999;
+    flex-direction: column;
+    padding: 8px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.nav-dropdown.open {
+    display: flex;
+}
+
+.nav-dropdown li {
+    list-style: none;
+}
+
+.nav-dropdown a {
+    display: block;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background 0.2s;
+}
+
+.nav-dropdown a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--rosa-acento);
+}
+
+/* ========================= */
+/* HERO                      */
+/* ========================= */
 .hero-home {
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 90px 20px 40px;
     min-height: 55vh;
     background: url('imagens/desenhoSecaoPrincipal/desenho2.png') center/cover no-repeat;
     position: relative;
     align-items: center;
-    padding-top: 90px; /* ajuste para a altura real do seu header */
 }
 
 .hero-grid {
@@ -184,7 +285,9 @@ section {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-/* ========================= */ /* BOTÕES */ /* ========================= */
+/* ========================= */
+/* BOTÕES                    */
+/* ========================= */
 .btn {
     padding: 12px 22px;
     border-radius: 30px;
@@ -193,7 +296,8 @@ section {
     font-weight: 600;
 }
 
-.btn, .btn a {
+.btn,
+.btn a {
     text-decoration: none;
 }
 
@@ -215,23 +319,22 @@ section {
     margin-bottom: 10px;
 }
 
-/* ========================= */ /* SEÇÃO TÍTULOS */ /* ========================= */
+/* ========================= */
+/* SEÇÃO TÍTULOS             */
+/* ========================= */
 .section-title {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem;
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 
-/* ========================= */ /* PRODUTOS / CARROSSEL */ /* ========================= */
+/* ========================= */
+/* PRODUTOS / CARROSSEL      */
+/* ========================= */
 .produtos {
-    padding: 80px 0;
-    padding-top: 120px;
-    padding-bottom: 80px;
-}
-
-.section-title {
-    margin-top: 40px;
+    padding: 120px 0 80px;
 }
 
 .busca-materiais {
@@ -284,7 +387,8 @@ section {
     overflow: hidden;
 }
 
-.produtos-list, #produtosCarrossel {
+.produtos-list,
+#produtosCarrossel {
     display: flex;
     gap: 20px;
     transition: transform 0.3s ease;
@@ -304,7 +408,6 @@ section {
     flex-direction: column;
 }
 
-/* Imagem do card — ajuste max-height para controlar o tamanho */
 .produto-card img {
     width: 100%;
     border-radius: 14px;
@@ -315,7 +418,6 @@ section {
     object-fit: cover;
 }
 
-/* Placeholder para produtos sem imagem */
 .produto-sem-imagem {
     width: 100%;
     min-height: 80px;
@@ -362,7 +464,9 @@ section {
     right: -25px;
 }
 
-/* ========================= */ /* SOBRE / EQUIPE */ /* ========================= */
+/* ========================= */
+/* SOBRE / EQUIPE            */
+/* ========================= */
 .sobre {
     background: var(--fundo);
     padding: 90px 0;
@@ -414,7 +518,9 @@ section {
     margin-bottom: 8px;
 }
 
-/* ========================= */ /* CONTATO */ /* ========================= */
+/* ========================= */
+/* CONTATO                   */
+/* ========================= */
 .contato {
     padding: 120px 20px;
     background: #f6f9fc;
@@ -489,7 +595,9 @@ section {
     color: #267e68;
 }
 
-/* ========================= */ /* MODAL */ /* ========================= */
+/* ========================= */
+/* MODAL                     */
+/* ========================= */
 .modal {
     position: fixed;
     top: 0;
@@ -542,7 +650,6 @@ section {
     cursor: pointer;
 }
 
-/* Mensagem para produtos sem amostra */
 .modal-sem-amostra {
     display: none;
     flex-direction: column;
@@ -569,7 +676,48 @@ section {
     color: #777;
 }
 
-/* ========================= */ /* CARRINHO */ /* ========================= */
+/* ========================= */
+/* BOTÃO VOLTAR AO TOPO      */
+/* ========================= */
+#scroll-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: var(--verde-principal);
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+    opacity: 0.9;
+    font-size: 24px;
+    z-index: 10000;
+}
+
+#scroll-top.visible {
+    display: flex;
+}
+
+#scroll-top:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+}
+
+#scroll-top::before {
+    content: "↑";
+    color: white;
+    font-size: 24px;
+}
+
+/* ========================= */
+/* CARRINHO                  */
+/* ========================= */
 .carrinho-icon {
     position: fixed;
     top: 20px;
@@ -580,7 +728,7 @@ section {
     border-radius: 50px;
     cursor: pointer;
     font-weight: bold;
-    z-index: 1000;
+    z-index: 1001;
     border: none;
 }
 
@@ -710,13 +858,17 @@ section {
     transform: scale(0.98);
 }
 
-/* ========================= */ /* FOOTER */ /* ========================= */
+/* ========================= */
+/* FOOTER                    */
+/* ========================= */
 .footer {
     text-align: center;
     padding: 20px;
 }
 
-/* ========================= */ /* MEDIA QUERIES */ /* ========================= */
+/* ========================= */
+/* MEDIA QUERIES             */
+/* ========================= */
 @media (max-width: 900px) {
     .hero-grid {
         flex-direction: column-reverse;
@@ -740,10 +892,6 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .produtos-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .contatos {
         gap: 20px;
     }
@@ -754,6 +902,68 @@ section {
 
     .email-card {
         font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    /* header compacto */
+    .header-content {
+        padding: 12px 16px;
+        position: relative;
+    }
+
+    .logo img {
+        height: 44px;
+    }
+
+    /* esconde menu desktop, mostra hamburguer */
+    .nav-list {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* esconde carrinho fixo no mobile — fica no dropdown */
+    .carrinho-icon {
+        top: 14px;
+        right: 56px; /* desloca para não sobrepor o hamburguer */
+        padding: 7px 11px;
+        font-size: 0.8rem;
+    }
+
+    /* HERO */
+    .hero-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .hero-imagens img:first-child {
+        display: none;
+    }
+
+    .hero-imagens {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-imagens img {
+        width: 75%;
+        max-width: 280px;
+        height: auto;
+    }
+
+    .hero-texto-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        gap: 15px;
     }
 }
 
@@ -779,10 +989,6 @@ section {
     .equipe {
         grid-template-columns: 1fr;
     }
-
-    .produtos-list {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 480px) {
@@ -793,92 +999,5 @@ section {
     .contatos {
         flex-direction: column;
         gap: 20px;
-    }
-}
-
-/* ========================= */ /* HERO - AJUSTE MOBILE */ /* ========================= */
-@media (max-width: 768px) {
-    /* Empilha tudo */
-    .hero-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    /* Remove imagem 1 */
-    .hero-imagens img:first-child {
-        display: none;
-    }
-
-    /* Organiza imagens */
-    .hero-imagens {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    /* Diminui imagem 2 */
-    .hero-imagens img {
-        width: 75%; /* controla o tamanho */
-        max-width: 280px; /* limite máximo */
-        height: auto;
-    }
-
-    /* Ajusta card de texto */
-    .hero-texto-card {
-        width: 100%;
-        max-width: 100%;
-        padding: 20px;
-        gap: 15px;
-    }
-
-    /* Deixa botão por último */
-    .hero-texto-card ul {
-        margin-top: 10px;
-    }
-}
-
-/* ========================= */ /* HEADER MOBILE SIMPLES */ /* ========================= */
-@media (max-width: 768px) {
-    body {
-        padding-top: 80px; /* ajusta espaço do header fixo */
-    }
-
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 0;
-    }
-
-    /* Logo menor */
-    .logo {
-        font-size: 1rem;
-        gap: 6px;
-    }
-
-    .logo img {
-        height: 22px;
-    }
-
-    /* Menu abaixo da logo */
-    .nav-list {
-        flex-direction: row;
-        justify-content: center;
-        gap: 14px;
-        flex-wrap: wrap;
-    }
-
-    .nav-list a {
-        font-size: 0.9rem;
-        font-weight: 600;
-    }
-
-    /* Ajuste do carrinho */
-    .carrinho-icon {
-        top: 12px;
-        right: 12px;
-        padding: 8px 12px;
-        font-size: 0.85rem;
     }
 }

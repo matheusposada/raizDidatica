@@ -490,7 +490,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const filtrosContainer = document.getElementById("filtrosContainer");
     const modal = document.getElementById("modalAmostra");
     const modalImg = document.getElementById("modalImagem");
-    const modalMensagem = document.getElementById("modalMensagem"); // ✅ adicionado
+    const modalMensagem = document.getElementById("modalMensagem");
     const closeBtn = modal?.querySelector(".modal-close");
     const modalOverlay = modal?.querySelector(".modal-overlay");
     const carrinhoEl = document.getElementById("carrinho");
@@ -500,6 +500,46 @@ document.addEventListener("DOMContentLoaded", () => {
     const carrinhoItens = document.getElementById("carrinhoItens");
     const carrinhoTotal = document.getElementById("carrinhoTotal");
     const contadorCarrinho = document.getElementById("contadorCarrinho");
+    const hamburger = document.getElementById("hamburger");
+
+    // ==============================
+    // MENU HAMBURGUER
+    // ==============================
+
+    const navDropdown = document.createElement("ul");
+    navDropdown.className = "nav-dropdown";
+    navDropdown.innerHTML = `
+        <li><a href="materiais.html" aria-current="page">Materiais</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+    `;
+    document.querySelector(".header").appendChild(navDropdown);
+
+    function fecharMenu() {
+        hamburger?.classList.remove("open");
+        navDropdown.classList.remove("open");
+        hamburger?.setAttribute("aria-expanded", "false");
+    }
+
+    hamburger?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = navDropdown.classList.contains("open");
+        if (isOpen) {
+            fecharMenu();
+        } else {
+            hamburger.classList.add("open");
+            navDropdown.classList.add("open");
+            hamburger.setAttribute("aria-expanded", "true");
+        }
+    });
+
+    navDropdown.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", fecharMenu);
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".header")) fecharMenu();
+    });
 
     // ==============================
     // CRIAR CARDS
@@ -510,7 +550,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.className = "produto-card";
         card.dataset.categoria = p.categoria;
         card.innerHTML = `
-            ${p.imagem                                          // ✅ trata imagem null
+            ${p.imagem
             ? `<img src="${p.imagem}" alt="${p.titulo}">`
             : `<div class="produto-sem-imagem">📄</div>`
         }
@@ -527,7 +567,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // MODAL
     // ==============================
 
-    function abrirModal(src) {                                  // ✅ trata amostra null
+    function abrirModal(src) {
         if (src) {
             modalImg.src = src;
             modalImg.style.display = "block";
@@ -554,11 +594,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "Escape") {
             if (modal.classList.contains("active")) fecharModal();
             if (carrinhoEl.classList.contains("active")) fecharCarrinho();
+            fecharMenu();
         }
     });
 
     // ==============================
-    // BUSCA
+    // BUSCA + FILTROS
     // ==============================
 
     function filtrarCards(termo = "", categoria = "todos") {
@@ -577,27 +618,17 @@ document.addEventListener("DOMContentLoaded", () => {
         filtrarCards(inputBusca.value.toLowerCase(), categoriaAtiva);
     });
 
-    // ==============================
-    // FILTROS
-    // ==============================
-
     if (filtrosContainer) {
         const categorias = [...new Set(produtosData.map(p => p.categoria))];
-
         filtrosContainer.innerHTML = `<button class="btn-filtro active" data-categoria="todos">Todos</button>`;
-
         categorias.forEach(cat => {
             filtrosContainer.innerHTML += `<button class="btn-filtro" data-categoria="${cat}">${cat}</button>`;
         });
 
         filtrosContainer.addEventListener("click", (e) => {
             if (!e.target.classList.contains("btn-filtro")) return;
-
-            filtrosContainer.querySelectorAll(".btn-filtro").forEach(btn =>
-                btn.classList.remove("active")
-            );
+            filtrosContainer.querySelectorAll(".btn-filtro").forEach(btn => btn.classList.remove("active"));
             e.target.classList.add("active");
-
             categoriaAtiva = e.target.dataset.categoria;
             filtrarCards(inputBusca?.value.toLowerCase() ?? "", categoriaAtiva);
         });
@@ -662,7 +693,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const precoNumerico = parseFloat(
                 item.preco.replace("R$", "").trim().replace(",", ".")
             );
-
             total += precoNumerico * item.qtd;
             quantidadeTotal += item.qtd;
 
