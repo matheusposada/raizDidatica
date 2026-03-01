@@ -112,15 +112,14 @@ body {
 /* HAMBURGUER                */
 /* ========================= */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
+    display: none;      /* Única regra necessária para sumir no desktop */
     background: none;
-    border: none;
+    border: none;       /* Remove bordas padrão do browser */
+    outline: none;      /* Remove o anel de foco que causa o 'ponto' */
     cursor: pointer;
-    padding: 6px;
+    padding: 0;
     z-index: 1002;
+    appearance: none;   /* Garante que o sistema operacional não force estilo */
 }
 
 .hamburger span {
@@ -640,7 +639,11 @@ body {
     }
 
     .hamburger {
-        display: flex;
+        display: flex;         /* Volta a aparecer */
+        flex-direction: column;
+        gap: 5px;
+        width: auto;           /* Deixa o tamanho ser definido pelos spans */
+        height: auto;
     }
 
     /* carrinho desloca para não cobrir o hamburguer */
