@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "escola-area",
             titulo: "Álbum de área - escola",
             categoria: "Área",
-            preco: "R$ 4,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/escola.png",
             amostra: "imagens/amostras/escola.png"
         },
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "decomposicao",
             titulo: "Decomposição em fatores primos - Stitch",
             categoria: "Decomposição em fatores primos",
-            preco: "R$ 4,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/decomposicao.png",
             amostra: "imagens/amostras/decomposicao.png"
         },
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "desafio-dos-simbolos",
             titulo: "Desafio dos símbolos",
             categoria: "Desafios",
-            preco: "R$ 6,00",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "receitas-despesas",
             titulo: "Receitas e Despesas",
             categoria: "Educação Financeira",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/receitas-despesas.png",
             amostra: "imagens/amostras/receitas-despesas.png"
         },
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "evolucao-dinheiro",
             titulo: "Evolução do dinheiro",
             categoria: "Educação Financeira",
-            preco: "R$ 3,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "equacao-aviao",
             titulo: "Equação do 1º grau - avião",
             categoria: "Equação 1º grau",
-            preco: "R$ 5,00",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "equacao-frutas",
             titulo: "Frutas abre e fecha",
             categoria: "Equação 1º grau",
-            preco: "R$ 6,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "equacoes-1grau",
             titulo: "Equações do 1º grau",
             categoria: "Equação 1º grau",
-            preco: "R$ 4,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "equacao-2grau",
             titulo: "Equação do 2º grau",
             categoria: "Equação 2º grau",
-            preco: "R$ 4,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "expressoes-minions",
             titulo: "Minions",
             categoria: "Expressões numéricas",
-            preco: "R$ 6,00",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/expressoes-minions.png",
             amostra: "imagens/amostras/expressoes-minions.png"
         },
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "instrumentos-musicais",
             titulo: "Instrumentos musicais",
             categoria: "Expressões numéricas",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "identificacao-fracao",
             titulo: "Identificação de fração",
             categoria: "Fração",
-            preco: "R$ 3,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/identificacao-fracao.png",
             amostra: "imagens/amostras/identificacao-fracao.png"
         },
@@ -117,12 +117,12 @@ document.addEventListener("DOMContentLoaded", () => {
             imagem: "imagens/amostras/bob-esponja.png",
             amostra: "imagens/amostras/bob-esponja.png"
         },
-        {id: "pizza", titulo: "Recorte - pizza", categoria: "Fração", preco: "R$ 5,00", imagem: null, amostra: null},
+        {id: "pizza", titulo: "Recorte - pizza", categoria: "Fração", preco: "R$ 4,00", imagem: null, amostra: null},
         {
             id: "trilha",
             titulo: "Trilha - adição e subtração de fração",
             categoria: "Fração",
-            preco: "R$ 6,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "juros-compostos",
             titulo: "Juros compostos",
             categoria: "Juros compostos",
-            preco: "R$ 6,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "juros-simples",
             titulo: "Juros simples",
             categoria: "Juros simples",
-            preco: "R$ 6,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "linguagem-algebrica",
             titulo: "Linguagem algébrica",
             categoria: "Linguagem algébrica",
-            preco: "R$ 6,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "abre-fecha",
             titulo: "Abre e fecha",
             categoria: "Média, moda e mediana",
-            preco: "R$ 6,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "monomios-semelhantes",
             titulo: "Monômios semelhantes",
             categoria: "Monômios",
-            preco: "R$ 6,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "notacao-bob-esponja",
             titulo: "Notação - Bob Esponja",
             categoria: "Notação científica",
-            preco: "R$ 6,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "halloween",
             titulo: "Halloween",
             categoria: "Números decimais",
-            preco: "R$ 4,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/halloween.png",
             amostra: "imagens/amostras/halloween.png"
         },
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "ferias",
             titulo: "Férias",
             categoria: "Números decimais",
-            preco: "R$ 4,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/ferias.png",
             amostra: "imagens/amostras/ferias.png"
         },
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "gatinho",
             titulo: "Gatinho",
             categoria: "Números decimais",
-            preco: "R$ 6,00",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/gatinho.png",
             amostra: "imagens/amostras/gatinho.png"
         },
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "natal",
             titulo: "Natal",
             categoria: "Números decimais",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/natal.png",
             amostra: "imagens/amostras/natal.png"
         },
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "egito",
             titulo: "Sistema de numeração egípcio",
             categoria: "Números egípcios",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/egito.png",
             amostra: "imagens/amostras/egito.png"
         },
@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "bbb-4operacoes",
             titulo: "Quatro operações - bbb",
             categoria: "Números inteiros",
-            preco: "R$ 4,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/bbb-4operacoes.png",
             amostra: "imagens/amostras/bbb-4operacoes.png"
         },
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "bbb-adicao-subtracao",
             titulo: "Adição e subtração - bbb",
             categoria: "Números inteiros",
-            preco: "R$ 4,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/bbb-adicao-subtracao.png",
             amostra: "imagens/amostras/bbb-adicao-subtracao.png"
         },
@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "bbb-multiplicacao-divisao",
             titulo: "Multiplicação e divisão - bbb",
             categoria: "Números inteiros",
-            preco: "R$ 6,00",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/bbb-multiplicacao-divisao.png",
             amostra: "imagens/amostras/bbb-multiplicacao-divisao.png"
         },
@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "pavao",
             titulo: "Números inteiros - pavão",
             categoria: "Números inteiros",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -250,7 +250,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "carnaval-potenciacao",
             titulo: "Potenciação - carnaval",
             categoria: "Potenciação",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/carnaval-potenciacao.png",
             amostra: "imagens/amostras/carnaval-potenciacao.png"
         },
@@ -258,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "animais",
             titulo: "Quatro operações - animais",
             categoria: "Números naturais",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "bbb-4operacoes-naturais",
             titulo: "Quatro operações (naturais) - bbb",
             categoria: "Números naturais",
-            preco: "R$ 4,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/bbb-4operacoes-naturais.png",
             amostra: "imagens/amostras/bbb-4operacoes-naturais.png"
         },
@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "carnaval-multiplicacao",
             titulo: "Multiplicação - carnaval",
             categoria: "Números naturais",
-            preco: "R$ 4,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/carnaval-multiplicacao.png",
             amostra: "imagens/amostras/carnaval-multiplicacao.png"
         },
@@ -282,7 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "capivara",
             titulo: "Adição e subtração - capivara",
             categoria: "Números naturais",
-            preco: "R$ 6,00",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "volta-4operacoes",
             titulo: "Quatro operações - volta às aulas",
             categoria: "Números naturais",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/volta-4operacoes.png",
             amostra: "imagens/amostras/volta-4operacoes.png"
         },
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "jogo-memoria",
             titulo: "Operações básicas - jogo da memória",
             categoria: "Números naturais",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -306,7 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "girafa",
             titulo: "Primos ou compostos - girafa",
             categoria: "Números primos ou compostos",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/girafa.png",
             amostra: "imagens/amostras/girafa.png"
         },
@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "primos",
             titulo: "Primos e compostos",
             categoria: "Números primos ou compostos",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "abre-fecha-romanos",
             titulo: "Abre e fecha - romanos",
             categoria: "Números romanos",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "roma",
             titulo: "Números romanos - Roma",
             categoria: "Números romanos",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/roma.png",
             amostra: "imagens/amostras/roma.png"
         },
@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "escola-perimetro",
             titulo: "Perímetro - escola",
             categoria: "Perímetro",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/escola-perimetro.png",
             amostra: "imagens/amostras/escola-perimetro.png"
         },
@@ -346,7 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "pintura",
             titulo: "Pintura - gatinho",
             categoria: "Potenciação",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -354,16 +354,16 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "carnaval-porcentagem",
             titulo: "Porcentagem - carnaval",
             categoria: "Porcentagem",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/carnaval-porcentagem.png",
             amostra: "imagens/amostras/carnaval-porcentagem.png"
         },
-        {id: "desconto", titulo: "Desconto", categoria: "Porcentagem", preco: "R$ 5,50", imagem: null, amostra: null},
+        {id: "desconto", titulo: "Desconto", categoria: "Porcentagem", preco: "R$ 4,00", imagem: null, amostra: null},
         {
             id: "paises",
             titulo: "Potência e raiz - países",
             categoria: "Potenciação",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/paises.png",
             amostra: "imagens/amostras/paises.png"
         },
@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "times",
             titulo: "Potência - times",
             categoria: "Potenciação",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/times.png",
             amostra: "imagens/amostras/times.png"
         },
@@ -379,7 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "trilha-gatinho",
             titulo: "Potência e raiz - gatinho",
             categoria: "Potenciação",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -387,7 +387,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "simpsons",
             titulo: "Potência - Simpsons",
             categoria: "Potenciação",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/simpsons.png",
             amostra: "imagens/amostras/simpsons.png"
         },
@@ -395,7 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "abre-fecha-probabilidade",
             titulo: "Abre e fecha - probabilidade",
             categoria: "Probabilidade",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "paises-radiacao",
             titulo: "Potência e raiz - países",
             categoria: "Radiação",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -411,7 +411,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "times-radiacao",
             titulo: "Potência - times",
             categoria: "Radiação",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: null,
             amostra: null
         },
@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "trilha-gatinho-radiacao",
             titulo: "Potência e raiz - gatinho",
             categoria: "Radiação",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/trilha-gatinho-radiacao.png",
             amostra: "imagens/amostras/trilha-gatinho-radiacao.png"
         },
@@ -427,7 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "scooby-doo-radiacao",
             titulo: "Potência - Scooby Doo",
             categoria: "Radiação",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/scooby-doo-radiacao.png",
             amostra: "imagens/amostras/scooby-doo-radiacao.png"
         },
@@ -435,7 +435,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "simpsons-regra-de-tres",
             titulo: "Regra de três - Simpsons",
             categoria: "Regra de três",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/simpsons-regra-de-tres.png",
             amostra: "imagens/amostras/simpsons-regra-de-tres.png"
         },
@@ -443,7 +443,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "sondagem-6ano",
             titulo: "Sondagem - 6º ano",
             categoria: "Volta às aulas",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/sondagem.png",
             amostra: "imagens/amostras/sondagem.png"
         },
@@ -451,7 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "sondagem-7ano",
             titulo: "Sondagem - 7º ano",
             categoria: "Volta às aulas",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/sondagem.png",
             amostra: "imagens/amostras/sondagem.png"
         },
@@ -459,7 +459,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "sondagem-8ano",
             titulo: "Sondagem - 8º ano",
             categoria: "Volta às aulas",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/sondagem.png",
             amostra: "imagens/amostras/sondagem.png"
         },
@@ -467,7 +467,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "sondagem-9ano",
             titulo: "Sondagem - 9º ano",
             categoria: "Volta às aulas",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/sondagem.png",
             amostra: "imagens/amostras/sondagem.png"
         },
@@ -475,7 +475,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: "volta-subtracao",
             titulo: "Subtração",
             categoria: "Volta às aulas",
-            preco: "R$ 5,50",
+            preco: "R$ 4,00",
             imagem: "imagens/amostras/sondagem.png",
             amostra: "imagens/amostras/sondagem.png"
         },
@@ -487,7 +487,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const produtosList = document.getElementById("produtosCarrossel");
     const inputBusca = document.getElementById("buscaProdutos");
-    const filtrosContainer = document.getElementById("filtrosContainer");
+    const filtrosLista = document.getElementById("filtrosLista");
     const modal = document.getElementById("modalAmostra");
     const modalImg = document.getElementById("modalImagem");
     const modalMensagem = document.getElementById("modalMensagem");
@@ -618,19 +618,46 @@ document.addEventListener("DOMContentLoaded", () => {
         filtrarCards(inputBusca.value.toLowerCase(), categoriaAtiva);
     });
 
-    if (filtrosContainer) {
-        const categorias = [...new Set(produtosData.map(p => p.categoria))];
-        filtrosContainer.innerHTML = `<button class="btn-filtro active" data-categoria="todos">Todos</button>`;
+    if (filtrosLista) {
+        const categorias = [...new Set(produtosData.map(p => p.categoria))].sort();
+        filtrosLista.innerHTML = `<button class="btn-filtro active" data-categoria="todos" role="listitem">Todos</button>`;
         categorias.forEach(cat => {
-            filtrosContainer.innerHTML += `<button class="btn-filtro" data-categoria="${cat}">${cat}</button>`;
+            filtrosLista.innerHTML += `<button class="btn-filtro" data-categoria="${cat}" role="listitem">${cat}</button>`;
         });
 
-        filtrosContainer.addEventListener("click", (e) => {
+        filtrosLista.addEventListener("click", (e) => {
             if (!e.target.classList.contains("btn-filtro")) return;
-            filtrosContainer.querySelectorAll(".btn-filtro").forEach(btn => btn.classList.remove("active"));
+            filtrosLista.querySelectorAll(".btn-filtro").forEach(btn => btn.classList.remove("active"));
             e.target.classList.add("active");
             categoriaAtiva = e.target.dataset.categoria;
             filtrarCards(inputBusca?.value.toLowerCase() ?? "", categoriaAtiva);
+        });
+    }
+
+    // Toggle sidebar no mobile
+    const filtrosToggle = document.getElementById("filtrosToggle");
+    if (filtrosToggle && filtrosLista) {
+        // no desktop a lista fica sempre visível (sem max-height no CSS)
+        // no mobile começa fechada e abre/fecha pelo botão
+        const isMobile = () => window.innerWidth <= 768;
+
+        if (!isMobile()) {
+            filtrosLista.classList.add("aberta");
+        }
+
+        filtrosToggle.addEventListener("click", () => {
+            const aberta = filtrosLista.classList.toggle("aberta");
+            filtrosToggle.setAttribute("aria-expanded", String(aberta));
+            filtrosToggle.classList.toggle("recolhido", !aberta);
+            filtrosToggle.textContent = aberta ? "▲" : "▼";
+            filtrosToggle.setAttribute("aria-label", aberta ? "Recolher categorias" : "Expandir categorias");
+        });
+
+        // ao redimensionar, garante estado correto
+        window.addEventListener("resize", () => {
+            if (!isMobile()) {
+                filtrosLista.classList.add("aberta");
+            }
         });
     }
 
