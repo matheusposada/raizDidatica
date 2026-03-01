@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none; /* remove bullets globalmente */
 }
 
 /* ========================= */
@@ -97,9 +98,13 @@ section {
 /* ========================= */
 /* MENU DESKTOP              */
 /* ========================= */
+.header-content nav {
+    margin-left: auto;
+}
+
 .nav-list {
-    list-style: none;
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -118,13 +123,16 @@ section {
 /* ========================= */
 .hamburger {
     display: none;
+    width: 0;
+    height: 0;
+    overflow: hidden;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 6px;
+    padding: 0;
     z-index: 1002;
 }
 
@@ -137,18 +145,9 @@ section {
     transition: all 0.3s ease;
 }
 
-/* animação X ao abrir */
-.hamburger.open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
-
-.hamburger.open span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* DROPDOWN MOBILE */
 .nav-dropdown {
@@ -167,10 +166,6 @@ section {
 
 .nav-dropdown.open {
     display: flex;
-}
-
-.nav-dropdown li {
-    list-style: none;
 }
 
 .nav-dropdown a {
@@ -198,7 +193,6 @@ section {
     padding: 90px 20px 40px;
     min-height: 55vh;
     background: url('imagens/desenhoSecaoPrincipal/desenho2.png') center/cover no-repeat;
-    position: relative;
     align-items: center;
 }
 
@@ -228,7 +222,7 @@ section {
 }
 
 .hero-texto-card h1 {
-    font-size: clamp(0.8rem, 4vw, 2.0rem);
+    font-size: clamp(0.8rem, 4vw, 2rem);
     font-weight: 800;
     color: var(--texto);
     line-height: 1.3;
@@ -236,7 +230,7 @@ section {
 }
 
 .hero-texto-card p {
-    font-size: clamp(1.2rem, 2vw, 1.1rem);
+    font-size: clamp(1rem, 2vw, 1.1rem);
     line-height: 1.5;
     color: #2f2f2f;
 }
@@ -251,13 +245,12 @@ section {
     border: 2px solid transparent;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.4s ease;
-    margin: 0 auto;
 }
 
 .hero-texto-card .btn-primary:hover {
     background: transparent;
     color: var(--rosa-acento);
-    border: 2px solid var(--rosa-acento);
+    border-color: var(--rosa-acento);
     transform: translateY(-3px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
@@ -294,10 +287,6 @@ section {
     border: none;
     cursor: pointer;
     font-weight: 600;
-}
-
-.btn,
-.btn a {
     text-decoration: none;
 }
 
@@ -391,7 +380,6 @@ section {
 #produtosCarrossel {
     display: flex;
     gap: 20px;
-    transition: transform 0.3s ease;
     overflow-x: auto;
     scroll-behavior: smooth;
 }
@@ -456,13 +444,8 @@ section {
     transform: translateY(-50%) scale(1.1);
 }
 
-.carrossel-btn.prev {
-    left: -25px;
-}
-
-.carrossel-btn.next {
-    right: -25px;
-}
+.carrossel-btn.prev { left: -25px; }
+.carrossel-btn.next { right: -25px; }
 
 /* ========================= */
 /* SOBRE / EQUIPE            */
@@ -509,13 +492,9 @@ section {
     margin-bottom: 15px;
 }
 
-.prof-card ul {
-    list-style: none;
-    font-size: 0.95rem;
-}
-
 .prof-card ul li {
     margin-bottom: 8px;
+    font-size: 0.95rem;
 }
 
 /* ========================= */
@@ -539,7 +518,6 @@ section {
 }
 
 .contato .section-title {
-    font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     color: #267e68;
     margin-bottom: 20px;
@@ -610,16 +588,12 @@ section {
     align-items: center;
 }
 
-.modal.active {
-    display: flex;
-}
+.modal.active { display: flex; }
 
 .modal-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
@@ -642,8 +616,7 @@ section {
 
 .modal-close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 10px; right: 10px;
     font-size: 24px;
     background: none;
     border: none;
@@ -661,9 +634,7 @@ section {
     text-align: center;
 }
 
-.modal-sem-amostra span {
-    font-size: 3rem;
-}
+.modal-sem-amostra span { font-size: 3rem; }
 
 .modal-sem-amostra p {
     font-family: 'Poppins', sans-serif;
@@ -691,17 +662,13 @@ section {
     border: none;
     border-radius: 50%;
     background: var(--verde-principal);
-    color: white;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
     opacity: 0.9;
-    font-size: 24px;
     z-index: 10000;
 }
 
-#scroll-top.visible {
-    display: flex;
-}
+#scroll-top.visible { display: flex; }
 
 #scroll-top:hover {
     transform: scale(1.2);
@@ -749,9 +716,7 @@ section {
     z-index: 998;
 }
 
-.carrinho-overlay.active {
-    display: block;
-}
+.carrinho-overlay.active { display: block; }
 
 .carrinho {
     position: fixed;
@@ -767,9 +732,7 @@ section {
     flex-direction: column;
 }
 
-.carrinho.active {
-    right: 0;
-}
+.carrinho.active { right: 0; }
 
 .carrinho-header {
     padding: 20px;
@@ -790,15 +753,8 @@ section {
     margin-bottom: 12px;
 }
 
-.carrinho-item strong {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.carrinho-item p {
-    margin: 0;
-    font-size: 14px;
-}
+.carrinho-item strong { display: block; margin-bottom: 5px; }
+.carrinho-item p      { margin: 0; font-size: 14px; }
 
 .carrinho-item button {
     margin-top: 8px;
@@ -817,10 +773,8 @@ section {
 
 #fecharCarrinho {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 35px;
-    height: 35px;
+    top: 15px; right: 15px;
+    width: 35px; height: 35px;
     border: none;
     background: #f2f2f2;
     border-radius: 50%;
@@ -854,9 +808,7 @@ section {
     box-shadow: 0 8px 20px rgba(39, 174, 96, 0.3);
 }
 
-.btn-finalizar:active {
-    transform: scale(0.98);
-}
+.btn-finalizar:active { transform: scale(0.98); }
 
 /* ========================= */
 /* FOOTER                    */
@@ -888,65 +840,45 @@ section {
         max-width: 90%;
     }
 
-    .equipe {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contatos {
-        gap: 20px;
-    }
-
-    .contato-icon {
-        font-size: 32px;
-    }
-
-    .email-card {
-        font-size: 28px;
-    }
+    .equipe { grid-template-columns: repeat(2, 1fr); }
+    .contatos { gap: 20px; }
+    .contato-icon { font-size: 32px; }
+    .email-card { font-size: 28px; }
 }
 
 @media (max-width: 768px) {
-    body {
-        padding-top: 70px;
-    }
+    body { padding-top: 70px; }
 
-    /* header compacto */
     .header-content {
         padding: 12px 16px;
         position: relative;
     }
 
-    .logo img {
-        height: 44px;
-    }
+    .logo img { height: 44px; }
 
-    /* esconde menu desktop, mostra hamburguer */
-    .nav-list {
-        display: none;
-    }
-
-    .hamburger {
+    .nav-list   { display: none; }
+    .hamburger  {
         display: flex;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        padding: 6px;
     }
 
-    /* esconde carrinho fixo no mobile — fica no dropdown */
     .carrinho-icon {
         top: 14px;
-        right: 56px; /* desloca para não sobrepor o hamburguer */
+        right: 56px;
         padding: 7px 11px;
         font-size: 0.8rem;
     }
 
-    /* HERO */
     .hero-grid {
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
 
-    .hero-imagens img:first-child {
-        display: none;
-    }
+    .hero-imagens img:first-child { display: none; }
 
     .hero-imagens {
         width: 100%;
@@ -968,36 +900,15 @@ section {
 }
 
 @media (max-width: 600px) {
-    .hero-texto-card h1 {
-        font-size: 1.8rem;
-    }
+    .hero-texto-card h1 { font-size: 1.8rem; }
+    .hero-texto-card p  { font-size: 1rem; }
 
-    .hero-texto-card p {
-        font-size: 1rem;
-    }
-
-    .hero-imagens {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .hero-imagens img {
-        width: 100%;
-        height: auto;
-    }
-
-    .equipe {
-        grid-template-columns: 1fr;
-    }
+    .hero-imagens { flex-direction: column; gap: 15px; }
+    .hero-imagens img { width: 100%; height: auto; }
+    .equipe { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-    .contato .section-title {
-        font-size: 1.5rem;
-    }
-
-    .contatos {
-        flex-direction: column;
-        gap: 20px;
-    }
+    .contato .section-title { font-size: 1.5rem; }
+    .contatos { flex-direction: column; gap: 20px; }
 }
